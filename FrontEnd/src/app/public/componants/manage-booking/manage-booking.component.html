@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-5">
+      <button class="btn btn-warning my-2">Manage Booking</button>
+    </div>
+
+
+  </div>
+<div class="card bg-primary text-white w-50" style="margin-left:300px;">
+  <form [formGroup]="searchForm">
+    <div class="mx-5 my-2">
+      <h3>Search The Booking Details With Details</h3>
+    </div>
+    <div class="m-3">
+
+      <label for="exampleInputEmail1" class="form-label">Reference Id</label>
+      <input type="number" formControlName="refId" class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp">
+
+    </div>
+    <small *ngIf="searchForm.controls['refId'].touched && searchForm.hasError('required','refId')"
+      class="text-danger">*Reference Id is Required</small>
+    <div class="m-3">
+
+      <label for="exampleInputEmail1" class="form-label">Cell Phone Number</label>
+      <input type="number" formControlName="cellPhone" class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp">
+
+    </div>
+    <small *ngIf="searchForm.controls['cellPhone'].touched && searchForm.hasError('required','cellPhone')"
+      class="text-danger">*Cell Phone Number is Required</small>
+      <span class="text-danger"
+
+      *ngIf="searchForm.controls['cellPhone'].touched && searchForm.hasError('minlength','cellPhone')">Enter 10 digit number
+
+    </span>
+
+
+    <br>
+    <button type="submit" [disabled]="searchForm.invalid" (click)="onSearch()"
+      class="btn btn-warning m-3 mt-3" >Search</button>
+      <button type="submit"
+      class="btn btn-success m-3 mt-3" data-bs-toggle="modal" [disabled]="temp"  data-bs-target="#exampleModal">Show Details</button>
+  </form>
+</div>
+</div>
+
+<!-- Searched Data Showed Here -->
+
+<div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-primary">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">!!     Your Searched Data      !!</h5>
+        <button type="button" (click)="resetForm()"   class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card my-1 mx-5" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"> -----:  Booking Details :---- </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Total Bill:&nbsp;&nbsp;&nbsp; {{bookedData.totalBill}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Total Stays:&nbsp;&nbsp;&nbsp;{{bookedData.stayDays}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Checkin Date:&nbsp;&nbsp;&nbsp;&nbsp;{{bookedData.checkinDate|date}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">CheckOut Date:&nbsp;&nbsp;&nbsp;&nbsp;{{bookedData.checkoutDate|date}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted"> Cell Phone:&nbsp;&nbsp;&nbsp; {{bookedData.cellPhone}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Camp Name: &nbsp;&nbsp;&nbsp; {{bookedData.campName}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Booking Ref Id:&nbsp;&nbsp;   {{bookedData.refId}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Billing Address:&nbsp;&nbsp;  {{bookedData.billingAddress}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Zip Code:&nbsp;&nbsp;&nbsp;&nbsp;{{bookedData.zipCode}}</h6>
+            <p class="card-text">--: Thanks For Using Our Service :--</p>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+         <button type="button"(click)="cancelBooking()" class="btn btn-danger">Cancel Booking</button>
+        <button type="button" (click)="resetForm()"  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>

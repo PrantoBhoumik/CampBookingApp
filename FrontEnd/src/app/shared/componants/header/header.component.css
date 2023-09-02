@@ -1,0 +1,14 @@
+header{
+    background-color: rgb(12, 3, 20);
+    text-align: center;
+    color: aliceblue;
+  }
+  ul li{
+    display: inline-block;
+    padding-left: 50px;
+    padding-bottom: 5px;
+
+  }
+  li a{
+    text-decoration: none;
+  }

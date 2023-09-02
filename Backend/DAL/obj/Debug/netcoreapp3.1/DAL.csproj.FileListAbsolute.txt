@@ -1,0 +1,13 @@
+D:\FinalProject\Backend\ValleyCamp\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+D:\FinalProject\Backend\ValleyCamp\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.json
+D:\FinalProject\Backend\ValleyCamp\DAL\bin\Debug\netcoreapp3.1\DAL.runtimeconfig.dev.json
+D:\FinalProject\Backend\ValleyCamp\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\FinalProject\Backend\ValleyCamp\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.AssemblyReference.cache
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+D:\FinalProject\Backend\ValleyCamp\DAL\obj\Debug\netcoreapp3.1\DAL.genruntimeconfig.cache

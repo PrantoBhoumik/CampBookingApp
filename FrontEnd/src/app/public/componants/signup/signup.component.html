@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <!-- <img src="https://www.kindpng.com/picc/m/65-653117_signup-button-image-png-log-in-clipart-transparent.png"
+            alt="logo" /> -->
+          <h5> !! Enter The Details To Register</h5>
+          <div>
+            <form [formGroup]="signupForm">
+
+              <div class="mb-3">
+
+                <label for="exampleInputEmail1" class="form-label">First Name</label>
+                <input type="text" formControlName="firstName" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+
+              </div>
+              <small *ngIf="signupForm.controls['firstName'].touched && signupForm.hasError('required','firstName')"
+                class="text-danger">*First Name is Required</small>
+              <div class="mb-3">
+
+                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+
+              </div>
+              <small *ngIf="signupForm.controls['lastName'].touched && signupForm.hasError('required','lastName')"
+                class="text-danger">*Last Name is Required</small>
+
+              <div class="mb-3">
+
+                <label for="exampleInputEmail1" class="form-label">UserName</label>
+                <input type="text" formControlName="userName" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+
+              </div>
+              <small *ngIf="signupForm.controls['userName'].touched && signupForm.hasError('required','userName')"
+                class="text-danger">*User Name is Required</small>
+              <div class="mb-3">
+
+                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+
+              </div>
+              <small *ngIf="signupForm.controls['email'].touched && signupForm.hasError('required','email')"
+                class="text-danger">*Email is Required</small>
+
+
+              <div class="mb-3 mt-1">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <small *ngIf="signupForm.controls['password'].touched && signupForm.hasError('required','password') "
+                class="text-danger">*User Password is Required</small>
+              <br>
+              <button type="submit" [disabled]="signupForm.invalid" (click)="OnSignUp()"
+                class="btn btn-primary mb-3 mt-2">Register</button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

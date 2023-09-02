@@ -1,0 +1,67 @@
+<div class="container-fluid text-primary ">
+  <div class="row">
+    <div class="col-md-5">
+      <h6><a routerLink="../admin-dashboard">Back To DashBoard</a></h6>
+    </div>
+    <div class="col-md-5">
+      <button class="btn btn-warning my-2">ADD NEW CAMP</button>
+    </div>
+  </div>
+
+  <div class="card bg-dark" style="margin-left:250px;margin-right:300px ;">
+    <form [formGroup]="campForm">
+
+      <div class="col-md-10 m-5">
+        <div class="mb-3">
+
+          <label for="exampleInputEmail1" class="form-label">Camp Name</label>
+          <input type="text" formControlName="campName" class="form-control"
+            aria-describedby="emailHelp">
+
+        </div>
+        <small *ngIf="campForm.controls['campName'].touched && campForm.hasError('required','campName')"
+          class="text-danger">*Camp Name is Required</small>
+        <div class="mb-3">
+
+          <label for="exampleInputEmail1" class="form-label"> Camp Capacity</label>
+          <input type="number" formControlName="capacity" class="form-control"
+            aria-describedby="emailHelp">
+
+        </div>
+        <small *ngIf="campForm.controls['capacity'].touched && campForm.hasError('required','capacity')"
+          class="text-danger">*Camp Capacity is Required</small>
+        <div class="mb-3">
+
+          <label for="exampleInputEmail1" class="form-label">Camp Price per Night</label>
+          <input type="number" formControlName="rate" class="form-control"
+            aria-describedby="emailHelp">
+
+        </div>
+        <small *ngIf="campForm.controls['rate'].touched && campForm.hasError('required','rate')"
+          class="text-danger">*Camp Price is Required</small>
+        <div class="mb-3">
+
+          <label for="exampleInputEmail1" class="form-label">Description</label>
+          <input type="text" formControlName="description" class="form-control"
+            aria-describedby="emailHelp">
+
+        </div>
+        <small *ngIf="campForm.controls['description'].touched && campForm.hasError('required','description')"
+          class="text-danger">*Description is Required</small>
+        <div class="mb-3">
+
+          <label for="exampleInputEmail1" class="form-label">Image Url</label>
+          <input type="url" formControlName="url" class="form-control"
+            aria-describedby="emailHelp">
+
+        </div>
+
+        <small *ngIf="campForm.controls['url'].touched && campForm.hasError('required','url')"
+          class="text-danger">*Image Url is Required</small>
+        <button [disabled]="campForm.invalid" (click)="AddCamp()" class="btn btn-success my-3">Submit</button>
+      </div>
+
+
+    </form>
+  </div>
+</div>

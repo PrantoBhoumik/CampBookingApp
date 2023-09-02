@@ -1,0 +1,13 @@
+D:\FinalProject\Backend\ValleyCamp\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+D:\FinalProject\Backend\ValleyCamp\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+D:\FinalProject\Backend\ValleyCamp\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.AssemblyReference.cache
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+D:\FinalProject\Backend\ValleyCamp\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+D:\FinalProject\Backend\ValleyCamp\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\FinalProject\Backend\ValleyCamp\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete

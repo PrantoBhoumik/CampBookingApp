@@ -1,0 +1,24 @@
+[
+  {
+    "id":1,
+    "capacity":4,
+    "description":"This is riverSide Camp",
+    "rate":200,
+    "bookUrl":"#"
+  },
+  {
+    "id":2,
+    "capacity":8,
+    "description":"This is Hill Side Camp",
+    "rate":400,
+    "bookUrl":"#"
+  },
+  {
+    "id":3,
+    "capacity":2,
+    "description":"This is valley Side Camp",
+    "rate":500,
+    "bookUrl":"#"
+  }
+]
+

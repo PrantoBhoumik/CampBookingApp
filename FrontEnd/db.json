@@ -1,0 +1,111 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Pranto Bhoumik",
+      "email": "pranto.bhoumik@nagarro.com",
+      "password": "Pranto@123",
+      "mobile": 9734707954,
+      "id": 1
+    },
+    {
+      "fullname": "Ayan Bhattacharya",
+      "email": "Ayan@gmail.com",
+      "password": "Ayan@123",
+      "mobile": 9746547447,
+      "id": 2
+    },
+    {
+      "fullname": "Subhojit Roy",
+      "email": "subhojit.roy@nagarro.com",
+      "password": "Subhojit@123",
+      "mobile": 9736567823,
+      "id": 3
+    }
+  ],
+  "campDetails": [
+    {
+      "id": 1,
+      "capacity": 4,
+      "description": "This is riverSide Camp",
+      "rate": 200,
+      "bookUrl": "#"
+    },
+    {
+      "id": 2,
+      "capacity": 8,
+      "description": "This is Hill Side Camp",
+      "rate": 400,
+      "bookUrl": "#"
+    },
+    {
+      "id": 3,
+      "capacity": 2,
+      "description": "This is valley Side Camp",
+      "rate": 500,
+      "bookUrl": "#"
+    },
+    {
+      "id": 4,
+      "campName": "",
+      "capacity": "",
+      "description": "",
+      "rate": ""
+    },
+    {
+      "id": 5,
+      "campName": "hkh",
+      "capacity": 4,
+      "description": "ljhlhhp",
+      "rate": 6856
+    }
+  ],
+  "BookedCampData": [
+    {
+      "campId": 5,
+      "campName": "BeachCamp",
+      "refId": 1669195395695,
+      "totalBill": 6400,
+      "stayDays": 16,
+      "billingAddress": "Satberia",
+      "state": "WB",
+      "country": "India",
+      "zipCode": 743262,
+      "checkinDate": "2022-11-24",
+      "checkoutDate": "2022-12-10",
+      "cellPhone": 9734707953,
+      "id": 1
+    },
+    {
+      "campId": 8,
+      "campName": "BamboCamp",
+      "refId": 1669200521330,
+      "totalBill": 900,
+      "stayDays": 1,
+      "billingAddress": "Satberia",
+      "state": "WB",
+      "country": "India",
+      "zipCode": 743262,
+      "checkinDate": "2022-11-25",
+      "checkoutDate": "2022-11-26",
+      "cellPhone": 9734707953,
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

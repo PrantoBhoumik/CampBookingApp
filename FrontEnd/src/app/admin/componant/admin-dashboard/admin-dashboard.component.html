@@ -1,0 +1,126 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-5">
+      <button class="btn btn-warning my-2">Admin DashBoard</button>
+    </div>
+    <div class="col-md-2">
+      <button routerLink="../add" class="btn btn-success mx-5 my-2">ADD</button>
+    </div>
+
+  </div>
+  <div>
+    <div *ngFor="let camp of campData">
+      <div class="card mb-2" style="border: slategray solid;">
+        <div class="row">
+          <div class="col-sm-2">
+            <img style="width:150px ; height:100px" src="{{camp.url}}" alt="CampPhoto" class="card-img-top" alt="...">
+          </div>
+
+          <div class="card-body col-md-1">
+            <h5 class="card-title">Name:{{camp.campName}} </h5>
+            <h6 class="card-title">Max capacity:{{camp.capacity}} </h6>
+          </div>
+          <div class="col-sm-3">
+            <p class="card-text">Description:{{camp.description}}</p>
+          </div>
+          <div class="col-sm-2">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"> Per Night charge(INR): {{camp.rate}} </li>
+            </ul>
+
+          </div>
+          <div class="col-sm-2">
+            <button type="button" (click)="onEdit(camp)" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Edit
+            </button>
+            <button (click)="deleteCampData(camp)" class="btn btn-danger m-2">Delete</button>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-info">
+      <div class="modal-header">
+        <h3 class="modal-title text-center" id="exampleModalLabel">Camp Details</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <form [formGroup]="campForm">
+          <div class="row">
+            <div>
+              <h5 class="mx-5">Fill the bellow form with Details</h5>
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Camp Name</span>
+                <input type="text" formControlName="campName" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <span class="text-danger"
+
+                    *ngIf="campForm.controls['campName'].touched && campForm.hasError('required','campName')"> Camp Name required
+
+                  </span>
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Rate per Night (INR)</span>
+                <input type="number" formControlName="rate" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <span class="text-danger"
+
+                    *ngIf="campForm.controls['rate'].touched && campForm.hasError('required','rate')">Price is required
+
+              </span>
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Capacity</span>
+                <input type="number" formControlName="capacity" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <span class="text-danger"
+
+                    *ngIf="campForm.controls['capacity'].touched && campForm.hasError('required','capacity')">Capacity Is required
+
+              </span>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Description</span>
+                <textarea formControlName="description" class="form-control" aria-label="With textarea"></textarea>
+              </div>
+              <span class="text-danger"
+
+                    *ngIf="campForm.controls['description'].touched && campForm.hasError('required','description')">Enter  required Description
+
+              </span>
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Enter image Url</span>
+                <input type="url" formControlName="url" class="form-control" aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-sm">
+              </div>
+              <span class="text-danger"
+
+                    *ngIf="campForm.controls['url'].touched && campForm.hasError('required','url')">Enter Image Url
+
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" [disabled]="campForm.invalid" (click)=" updateCampData()" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

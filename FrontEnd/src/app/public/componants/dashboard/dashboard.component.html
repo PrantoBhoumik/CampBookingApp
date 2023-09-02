@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <!-- filter:SearchCapacity:'capacity' -->
+  <div class="mb-2">
+    <label>Filter By Capacity &nbsp;</label>
+
+    <input type="number" [(ngModel)]='capacity'>
+
+    <button type="button" class="btn btn-info m-1" (click)="onCapacityFilter()">Search</button>
+
+    <button type="button" class="btn btn-danger m-1" (click)="onCapacityFilterClear()">Clear</button>
+    <label>Sort by &nbsp;</label>
+    <select [(ngModel)]='SortbyParam'>
+      <option value="capacity">Capacity</option>
+      <option value="rate">Price</option>
+    </select>
+    <button (click)="onSortDirection()">
+      <i *ngIf="SortDirection==='asc'" class="fas fa-sort-alpha-down"></i>
+      <i *ngIf="SortDirection==='desc'" class="fas fa-sort-alpha-up"></i>
+
+    </button>
+  </div>
+  <div *ngFor="let camp of campData|filter:SearchCapacity:'capacity'|sort:[SortbyParam,SortDirection]">
+    <div class="card mb-2" style="border: slategray solid;">
+      <div class="row">
+        <div class="col-sm-2">
+          <img src="{{camp.url}}" style="width:150px ; height:100px" alt="CampPHOTO" class="card-img-top" alt="...">
+        </div>
+
+        <div class="card-body col-md-1">
+          <h5 class="card-title">Name:{{camp.campName}} </h5>
+          <h6 class="card-title">Max capacity:{{camp.capacity}} </h6>
+        </div>
+        <div class="col-sm-3">
+          <p class="card-text">Description:{{camp.description}}</p>
+        </div>
+        <div class="col-sm-3">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Per Night charge : Rs{{camp.rate}} </li>
+          </ul>
+          <button class="btn btn-primary" *ngIf="camp.status=='avilable'" routerLink="/public/booking/{{camp.campId}}"
+            (click)="passBookedCamp(camp)">Book Now</button>
+          <button [disabled] class="btn btn-dark" *ngIf="camp.status=='booked'"
+            >Booked</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

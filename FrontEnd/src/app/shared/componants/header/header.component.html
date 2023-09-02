@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <header>
+      <h1 class="text-white">Valley Forge Camp Booking</h1>
+      <ul>
+        <li><a routerLink="/" class="text-info m-3">Home</a></li>
+        <li><a routerLink="/public/manage-booking" class="text-info m-3">Manage Booking</a></li>
+        <li *ngIf="!this.auth.IsLoggedIn()"><a routerLink="/public/login" class="text-info m-3">Admin Login</a></li>
+        <li *ngIf="this.auth.IsLoggedIn()"><a routerLink="/admin/admin-dashboard" class="text-info mx-5">Admin DashBoard</a></li>
+        <li *ngIf="this.auth.IsLoggedIn()"><a routerLink="/public/signup" class="text-info  m-3">Register New Admin</a></li>
+        <li *ngIf="this.auth.IsLoggedIn()"><a (click)="auth.logOut()" class="text-danger mx-5">LOGOUT</a></li>
+      </ul>
+    </header>
+  </div>
